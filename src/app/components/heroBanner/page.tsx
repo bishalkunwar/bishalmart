@@ -4,11 +4,18 @@ import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 
-const HeroBanner = () => {
+
+interface HeroBannerData {
+  smallText: string;
+  midText: string;
+  image: string; 
+}
+
+const HeroBanner = ({heroBanner}:{heroBanner:HeroBannerData}) => {
   return (
     <div className='hero-banner-container'>
       <div>
-        <p className='beasts-solo'>Small Text</p>
+        <p className='beasts-solo'>{heroBanner.smallText}</p>
         <h3>Mid Text</h3>
         <Image src='' alt='headphones' className='hero-banner-image'/>
 
