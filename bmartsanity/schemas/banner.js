@@ -5,7 +5,7 @@ export default{
     fields:[
         {
             name:"image", title:"Image", type:"array", 
-            // of:[{type:"image"}],
+            of:[{type:"image"}],
             options:{
                 hotspot: true,
             }
@@ -28,22 +28,22 @@ export default{
         {
             name: "smallText",
             title:"SmallText",
-            type:"string"
+            type:"string",
         },
         {
             name:"midText",
             title:"MidText",
-            type:"string,"
+            type:"string",
         },
         {
             name:"largeText",
             title:"LargeText",
-            type:"string"
+            type:"string",
         },
         {
             name:"largeText1",
             title:"LargeText1",
-            type:"String",
+            type:"string",
         },
         {
             name:"largeText2",
@@ -58,7 +58,7 @@ export default{
         {
             name:"saleTime",
             title:"SalesTime",
-            type:"string"
+            type:"string",
         },
     ]
 }

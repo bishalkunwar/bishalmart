@@ -27,12 +27,12 @@ export default{
         {
             name: "price",
             title:"Price",
-            type:"number"
+            type:"number",
         },
         {
             name:"details",
             title:"Details",
-            type:"string,"
+            type:"string",
         },
     ]
 }
