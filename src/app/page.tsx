@@ -1,15 +1,35 @@
-
+import { client } from '../../lib/client';
 import React from 'react'
-import Link from 'next/link'
-import CartPage from './components/cart/page'
-import HomePage from '../../pages'
+// import HomePage from '../../pages'
 
-const page = () => {
-  return (
-    <div>
-      <HomePage />
-    </div>
-  )
-}
+export default async function ShowData() {
+  try {
+      // Fetch data from Sanity
+      const productQuery = '*[_type == "product"]';
+      const products = await client.fetch(productQuery);
 
-export default page
+      const renderedData = products.map((product:any)=>{
+        return(
+          <div key={product.name}>
+              {product.name}
+          </div>
+        )
+      })
+      console.log(renderedData);
+      return(
+        <div>
+          <p>Home Page</p>
+          <div>{renderedData}</div>
+        </div>
+      )
+  } catch (error) {
+      console.error('Error fetching data:', error);
+      return  error;
+  }
+
+};
+
+
+
+
+
