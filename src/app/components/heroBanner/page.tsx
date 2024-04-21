@@ -1,4 +1,4 @@
-// "use client"
+"use client"
 
 // import React from 'react'
 // import Image from 'next/image';
@@ -34,24 +34,18 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-
-interface BannerData {
-  smallText: string;
-  midText: string;
-  image: string;
+import { client } from '../../../../lib/client';
+interface dataInterface{
+  rData:any
 }
 
-interface HeroBannerProps {
-  bannerData: BannerData;
-}
-
-const HeroBanner: React.FC<HeroBannerProps> = ({ bannerData }) => {
+const HeroBanner = ({rData}:dataInterface) => {
  
+  console.log(rData);
   return (
     <div className='hero-banner-container'>
       <div>
-        <p className='beasts-solo'>{bannerData?.smallText}</p>
-        <h3>{bannerData?.midText}</h3>
+        <p className='beasts-solo'>{rData.smallText}</p>
         {/* <Image src={bannerData?.image} alt='headphones' className='hero-banner-image' /> */}
         <div>
           <Link href="/product/productID">

@@ -1,5 +1,6 @@
 import { client } from '../../lib/client';
 import React from 'react'
+import HeroBanner from './components/heroBanner/page';
 // import HomePage from '../../pages'
 
 export default async function ShowData() {
@@ -15,11 +16,10 @@ export default async function ShowData() {
           </div>
         )
       })
-      console.log(renderedData);
+      // console.log(renderedData);
       return(
         <div>
-          <p>Home Page</p>
-          <div>{renderedData}</div>
+          <HeroBanner rData={renderedData}/>
         </div>
       )
   } catch (error) {
