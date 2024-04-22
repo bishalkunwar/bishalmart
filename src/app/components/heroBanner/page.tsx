@@ -41,11 +41,26 @@ interface dataInterface{
 
 const HeroBanner = ({rData}:dataInterface) => {
  
-  console.log(rData);
+  // const loadedData = rData.map((data:any)=>{
+  //   return(
+  //     <div key={data.smallText}>
+  //       {data.smallText}
+  //     </div>
+  //   )
+  // })
+
+  // console.log(loadedData);
   return (
+
     <div className='hero-banner-container'>
-      <div>
-        <p className='beasts-solo'>{rData.smallText}</p>
+      <div>        
+      <div className='hero-banner-container'>
+      {rData.map((data:any, index:any) => (
+        <div key={index}>
+          {data}
+        </div>
+      ))}
+    </div>
         {/* <Image src={bannerData?.image} alt='headphones' className='hero-banner-image' /> */}
         <div>
           <Link href="/product/productID">
