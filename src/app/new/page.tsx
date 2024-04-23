@@ -62,7 +62,7 @@ export default function CreateProductPage() {
     <form action={action}>
         <h3 className='font-bold m-3 '>Lets Create a Product</h3>
         <div className='flex flex-col gap-4'>
-            {/* <div className='flex gap-4'>
+            <div className='flex gap-4'>
                 <label className='w-12' htmlFor='image'>Image: </label>
                 <input
                     type='file'
@@ -71,7 +71,7 @@ export default function CreateProductPage() {
                     name='image'
                     accept='image'
                 />
-            </div> */}
+            </div>
             <div className='flex gap-4'>
                 <label className='w-12 h-16' htmlFor='name'>name: </label>
                 <input
