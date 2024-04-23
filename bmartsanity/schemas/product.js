@@ -4,12 +4,13 @@ export default{
     type: "document",
     fields:[
         {
-            name:"image", title:"Image", type:"array", 
-            of:[{type:"image"}],
+            name:"image", title:"Image", type:"image", 
+            // of:[{type:"image"}],
+            
             options:{
                 hotspot: true,
             }
-        },
+        },  
         {
             name:"name",
             title:"Name",
