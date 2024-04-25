@@ -15,9 +15,10 @@ interface productProps{
 const ProductPage = ({product}:productProps) => {
   return (
     <div>
-      <Link href={`/product/${product.slug.current.toString()}`}>
+      <Link href={`/product/${product._id}`}>
         <div className='product-card'>
-          <Image src={urlFor(product.image)} 
+          <Image  
+            src={urlFor(product.image)} 
             alt='product1/2/3'
             width={250}
             height={250}
