@@ -55,11 +55,25 @@ import { createProduct } from '@/actions';
 // };
 
 export default function CreateProductPage() {
-  //const [formState, action] = useFormState(reducer, { message: '' });
-  const [formState, action] = useFormState(createProduct, {message:''});
+    //const [formState, action] = useFormState(reducer, { message: '' });
+    //   const [formState, action] = useFormState(createProduct, {message:''});
 
-  return (
-    <form action={action}>
+
+    const [formState, action] = useFormState(createProduct, { message: '' });
+
+    const handleSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    try {
+        const result = await createProduct(formData.get('name') as string, formData.get('image') as File, formData);
+        console.log(result); // Log the result or handle it as needed
+    } catch (error) {
+        console.error('Error creating product:', error);
+    }
+    };
+
+return (
+    <form onSubmit={(event) => handleSubmit(event)} enctype="multipart/form-data">
         <h3 className='font-bold m-3 '>Lets Create a Product</h3>
         <div className='flex flex-col gap-4'>
             <div className='flex gap-4'>
@@ -69,7 +83,7 @@ export default function CreateProductPage() {
                     className='border rounded p-2 w-full' 
                     id='image'
                     name='image'
-                    accept='image'
+                    accept='image/*'
                 />
             </div>
             <div className='flex gap-4'>
