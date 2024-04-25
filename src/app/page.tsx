@@ -28,7 +28,7 @@ export default async function ShowData() {
           ))}
         </div>
 
-        <FooterBanner/>
+        <FooterBanner footerData = {banner}/>
       </div>
     );
   } catch (error) {
