@@ -4,7 +4,7 @@ import React from 'react'
 
 const NavBar = () => {
   return (
-    <div>page</div>
+    <div>navbar</div>
   )
 };
 
