@@ -33,11 +33,12 @@ interface HeroBannerProps {
 
 const HeroBanner = ({ rData }: HeroBannerProps) => {
   const loadedData = rData.map((bdata: any) => (
-    <div className='hero-banner-container' key={bdata.smallText}>
+    <div className='hero-banner-container' key={bdata._id}>
       <div>
         <p className='beats-solo'>{bdata.smallText}</p>
         <h3>{bdata.midText}</h3>
         <h1>{bdata.largeText}</h1>
+        {/* <Image src={(urlFor(bdata.image).url())} alt='herobannerimage'/> */}
         <img src="https://images.unsplash.com/photo-1713781317896-75f337b2db2a?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8" alt='bannerimage' className='hero-banner-image'/>
         {/* <img src={urlFor(bdata.image)} alt='bannerimage' className='hero-banner-image'/> */}
         {/* {bdata.image && bdata.image.asset && bdata.image.asset._ref && (

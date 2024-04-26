@@ -3,14 +3,22 @@ export default{
     title:" product",
     type: "document",
     fields:[
-        {
-            name:"image", title:"Image", type:"image", 
-            // of:[{type:"image"}],
+        // {
+        //     name:"image", title:"Image", type:"image", 
+        //     // of:[{type:"image"}],
             
-            options:{
-                hotspot: true,
-            }
-        },  
+        //     options:{
+        //         hotspot: true,
+        //     }
+        // },  
+        {
+            name: 'image',
+            title: 'Image',
+            type: 'image',
+            options: {
+              hotspot: true,
+            },
+        },
         {
             name:"name",
             title:"Name",

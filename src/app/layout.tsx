@@ -20,9 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
+      {/* <Head>
         <title>Bishal MAC store</title>
-      </Head>
+      </Head> */}
       
       <body className={inter.className}>
         <div className='layout'>

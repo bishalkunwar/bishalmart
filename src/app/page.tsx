@@ -7,8 +7,19 @@ import { client } from '../../lib/client';
 export default async function ShowData() {
   try {
     // Fetch data from Sanity
-    const bannerQuery = '*[_type == "banner"]';
+    const bannerQuery = `*[_type == "banner"] | order(_createdAt desc){
+      _id,
+      image{
+        asset->{
+          url
+        }
+      },
+      smallText, midText, largeText, product, buttonText
+
+    }`;
     const banner = await client.fetch(bannerQuery);
+
+    // console.log(JSON.stringify(banner.image));
 
     const productQuery = '*[_type == "product"]';
     const products = await client.fetch(productQuery);

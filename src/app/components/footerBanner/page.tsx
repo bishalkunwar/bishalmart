@@ -69,7 +69,6 @@
 
 import Link from 'next/link';
 import React from 'react';
-import { AiFillInstagram, AiOutlineTwitter } from "react-icons/ai";
 import Image from 'next/image';
 
 interface ImageReference {

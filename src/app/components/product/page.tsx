@@ -17,12 +17,12 @@ const ProductPage = ({product}:productProps) => {
     <div>
       <Link href={`/product/${product._id}`}>
         <div className='product-card'>
-          <Image  
+          {/* <Image  
             src={urlFor(product.image)} 
             alt='product1/2/3'
             width={250}
             height={250}
-            className="product-image"/>
+            className="product-image"/> */}
             <p className="product-name">{product.name}</p>
             <p className="product-price">${product.price}</p>
         </div>
