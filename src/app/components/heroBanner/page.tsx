@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { urlFor } from '../../../../lib/client';
 // import { urlFor } from '../../../../lib/client';
+import {useNextSanityImage} from "next-sanity-image";
 
 interface ImageReference {
   _ref: string;
