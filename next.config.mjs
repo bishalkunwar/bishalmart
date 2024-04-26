@@ -15,7 +15,7 @@ const nextConfig = {
         formats: ['image/webp', 'image/avif'],
         disableStaticImages: false,
         // remotePatterns: ['https://cdn.sanity.io/*'], // Use this line instead of domains
-      },
+    },
 };
 
 export default nextConfig;

@@ -21,7 +21,7 @@ export default{
             type:"string",
         },
         {
-            name:"description",
+            name:"description", 
             title:"Desc",
             type:"string",
         },

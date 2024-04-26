@@ -110,14 +110,16 @@ const FooterBanner = ({ footerData }: FooterBannerProps) => {
         <div className='right'>
           <p>{bannerData.smallText}</p>
           <h3>{bannerData.midText}</h3>
+          {bannerData.image && (
+            <Image src={bannerData.image.asset.url} alt="banner-image" width={500} height={300} />
+          )}
           <p>{bannerData.description}</p>
           <Link href={`/product/${bannerData.product}`}>
             <button type='button'>{bannerData.buttonText}</button>
           </Link>
         </div>
 
-        {/* Include your Image component here */}
-        {/*   */}
+        
       </div>
     </div>  
   ));

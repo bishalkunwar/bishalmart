@@ -39,19 +39,9 @@ const HeroBanner = ({ rData }: HeroBannerProps) => {
         <p className='beats-solo'>{bdata.smallText}</p>
         <h3>{bdata.midText}</h3>
         <h1>{bdata.largeText}</h1>
-        {/* <Image src={(urlFor(bdata.image).url())} alt='herobannerimage'/> */}
-        <img src="https://images.unsplash.com/photo-1713781317896-75f337b2db2a?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8" alt='bannerimage' className='hero-banner-image'/>
-        {/* <img src={urlFor(bdata.image)} alt='bannerimage' className='hero-banner-image'/> */}
-        {/* {bdata.image && bdata.image.asset && bdata.image.asset._ref && (
-          <Image
-            src={urlFor(bdata.image.asset._ref).toString()}
-            alt='bannerimage'
-            className='hero-banner-image'
-            width={500}
-            height={300}
-          />
-        )} */}
-
+        {bdata.image && (
+            <Image src={bdata.image.asset.url} alt="banner-image" width={500} height={300} />
+        )}
         <div>
           <Link href={`/product/${bdata.product}`}>
             <button type='button'>{bdata.buttonText}</button>
