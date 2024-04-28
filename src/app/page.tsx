@@ -19,9 +19,9 @@ export default async function ShowData() {
     }`;
     const banner = await client.fetch(bannerQuery);
 
-    const productQuery = `*[_type == "product"] | order(_createdAt asc){
+    const productQuery = `*[_type == "product"] {
       _id, 
-      image{
+      image {
         asset->{
           url
         }
@@ -31,6 +31,9 @@ export default async function ShowData() {
     }`
     const products = await client.fetch(productQuery);
 
+    // products.map((product:any) => {
+    //   console.log(product);
+    // });
 
     // Render the banner data in your UI
     return (
@@ -41,10 +44,14 @@ export default async function ShowData() {
           <p className='text-xs font-extralight'>Speaker there are many variations passages</p>
         </div>
 
+        <p><b>Products below</b></p>
+
         <div className='product-container'>
-          <ProductPage  product={products}/>
+          {products.map((product:any) => (
+            <ProductPage key={product._id} product={product} />
+          ))}
         </div>
-          <p>footer below</p>
+          <p><b>Footer below</b></p>
         <FooterBanner footerData = {banner}/> 
 
 
