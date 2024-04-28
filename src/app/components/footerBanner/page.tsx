@@ -117,9 +117,7 @@ const FooterBanner = ({ footerData }: FooterBannerProps) => {
           <Link href={`/product/${bannerData.product}`}>
             <button type='button'>{bannerData.buttonText}</button>
           </Link>
-        </div>
-
-        
+        </div> 
       </div>
     </div>  
   ));
